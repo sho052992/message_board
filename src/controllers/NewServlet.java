@@ -36,28 +36,7 @@ public class NewServlet extends HttpServlet {
 
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/views/messages/new.jsp");
         rd.forward(request, response);
+
     }
+
 }
-
-        /*EntityManager em=DButil.createEntityManager();
-        em.getTransaction().begin();
-
-        Message m=new Message();
-
-        String title="taro";
-        m.setTitle(title);
-
-        String content="hello";
-        m.setContent(content);
-
-        Timestamp currentTime=new Timestamp(System.currentTimeMillis());
-        m.setCreated_at(currentTime);
-        m.setUpdated_at(currentTime);
-
-        em.persist(m);
-        em.getTransaction().commit();
-
-        response.getWriter().append(Integer.valueOf(m.getId()).toString());*/
-
-
-
