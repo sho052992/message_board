@@ -38,7 +38,7 @@ public class IndexServlet extends HttpServlet {
         List<Message>messages=em.createNamedQuery("getAllMessages",Message.class).getResultList();
         em.close();
 
-        request.setAttribute("messages",messages);
+        request.setAttribute("messages",messages);//index.jspにデータを渡す
 
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/views/messages/index.jsp");
         rd.forward(request,response);
