@@ -12,7 +12,7 @@ public class MessageValidator {
 
         String title_error=validateTitle(m.getTitle());
         if(!title_error.equals("")) {
-            errors.add(title_error);
+            errors.add(title_error);//タイトルエラー１件追加？
         }
         String content_error=validateContent(m.getContent());
         if(!content_error.equals("")) {
